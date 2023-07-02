@@ -1,5 +1,6 @@
 # implement a design from scratch
 # and make it responsive!
+## no external frameworks allowed
 ## no JavaScript allowed
 
 For this assignment, we are asked to implement from scratch, without using any library, a fully functional web page that looks like the designer files provided.
