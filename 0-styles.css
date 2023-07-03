@@ -49,17 +49,28 @@
 :root {
     --default-font: url("./fonts/SourceSansPro-Regular.otf");
     --bold-font: url("./fonts/SourceSansPro-Bold.otf");
-    --link-hover: #FF6565;
-    --link-active: #FF6565;
-    --white: #ffffff;
-    
+    --link-hoveractive: #FF6565;
+    --text-white: #ffffff;
+    --text-dark: #071629;
 
+
+}
+
+
+/* max width of content must be 1000px, also some other defaults */
+body {
+    max-width: 1000px;
+    margin: auto;
+    font-family: var(--default-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* color for hover or active links */
 a:hover,
 a:active {
-    color: var(--color-red);
+    color: var(--link-hoveractive);
 }
 
 /* color for hover or active buttons */
@@ -68,7 +79,6 @@ a:active {
     opacity: 0.9;
 }
 
-/* max width of content must be 1000px */
-body {
-    max-width: 1000px;
+.heady {
+    background-image: url("./images/headphones_hero_1.jpg")
 }
