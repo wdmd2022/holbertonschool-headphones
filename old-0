@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="0-styles.css">
+    <title>Headphones</title>
+</head>
+<body>
+    <div class="heady">
+        <header>
+            <a class="logo" href="#">
+                <img src="./images/logo_headphones.png" alt="headphones logo">
+            </a>
+            <nav class="navigation">
+                <ul class="navul">
+                    <li class="navlink">what we do</li>
+                    <li class="navlink">our results</li>
+                    <li class="navlink">contact us</li>
+                </ul>
+            </nav>
+        </header>
+    </header>
+</body>
+</html>

@@ -58,6 +58,7 @@
 
 
 /* max width of content must be 1000px, also some other defaults */
+/*
 body {
     max-width: 1000px;
     margin: auto;
@@ -66,7 +67,12 @@ body {
     flex-direction: column;
     align-items: center;
 }
+*/
 
+a {
+    color: var(--text-white);
+    text-decoration: none;
+}
 /* color for hover or active links */
 a:hover,
 a:active {
@@ -79,6 +85,97 @@ a:active {
     opacity: 0.9;
 }
 
+/* HEADER TIME */
+
+/* class for div that holds the header + hero image sections */
 .heady {
-    background-image: url("./images/headphones_hero_1.jpg")
+    background-image: url("./images/headphones_hero_1.jpg");
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    color: var(--text-white);
 }
+
+/* class for just the top header */
+.header {
+    display: flex;
+}
+
+
+/* class for the LOGO */
+.logo {
+}
+
+/* horizontal navigation */
+#widenav {
+    display: block;
+}
+
+#widenav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#widenav li {
+    list-style-type: none;
+    padding-inline: 2rem;
+}
+
+
+
+/* hamburger navigation */
+
+#hamburger-input{
+    display: none;
+  }
+  
+#hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(
+    to bottom, 
+    #3D0E61, #3D0E61 20%, 
+    white 20%, white 40%, 
+    #3D0E61 40%, #3D0E61 60%, 
+    white 60%, white 80%, 
+    #3D0E61 80%, #3D0E61 100%
+    );
+}
+
+#hamburger-menu #sidebar-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #3D0E61;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+
+
+
+
+/* media queries */
+@media screen and (max-width: 480px) {
+    #widenav {
+      display: none;
+    }
+    #hamburger-menu {
+      display: block;
+    }
+  }
