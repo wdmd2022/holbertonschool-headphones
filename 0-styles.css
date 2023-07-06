@@ -47,135 +47,137 @@
 
 /* it's a good day to declare some variables */
 :root {
-    --default-font: url("./fonts/SourceSansPro-Regular.otf");
-    --bold-font: url("./fonts/SourceSansPro-Bold.otf");
+    --font-family: 'Source Sans Pro', sans-serif;
     --link-hoveractive: #FF6565;
-    --text-white: #ffffff;
-    --text-dark: #071629;
+    --color-white: #ffffff;
+    --color-dark: #071629;
 
 
 }
 
-
-/* max width of content must be 1000px, also some other defaults */
-/*
-body {
-    max-width: 1000px;
-    margin: auto;
-    font-family: var(--default-font);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-*/
-
-a {
-    color: var(--text-white);
+.header-nav a {
     text-decoration: none;
-}
-/* color for hover or active links */
-a:hover,
-a:active {
-    color: var(--link-hoveractive);
+    color: var(--color-white);
 }
 
-/* color for hover or active buttons */
-.button:hover,
-.button:active {
-    opacity: 0.9;
-}
-
-/* HEADER TIME */
-
-/* class for div that holds the header + hero image sections */
-.heady {
-    background-image: url("./images/headphones_hero_1.jpg");
-    display: flex;
-    flex-direction: column;
-    padding: 5%;
-    color: var(--text-white);
-}
-
-/* class for just the top header */
-.header {
-    display: flex;
-}
-
-
-/* class for the LOGO */
-.logo {
-}
-
-/* horizontal navigation */
-#widenav {
-    display: block;
-}
-
-#widenav ul {
-    display: flex;
-    justify-content: space-between;
-}
-
-#widenav li {
+.header-nav li {
     list-style-type: none;
-    padding-inline: 2rem;
+}
+
+.header-nav ul {
+    display:
+}
+
+html {
+    font-family: var(--font-family);
+}
+
+header {
+    width: 100%;
+    padding: 5%;
+    color: var(--color-white);
+    background-image: url('./images/headphones_hero_1.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.heady {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.navvy {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.logo {
+    width: 161px;
+    height: 32px;
 }
 
 
 
-/* hamburger navigation */
-
-#hamburger-input{
-    display: none;
-  }
-  
-#hamburger-menu {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    display: none;
-    border: none;
-    padding: 0px;
-    margin: 0px;
-    background: linear-gradient(
-    to bottom, 
-    #3D0E61, #3D0E61 20%, 
-    white 20%, white 40%, 
-    #3D0E61 40%, #3D0E61 60%, 
-    white 60%, white 80%, 
-    #3D0E61 80%, #3D0E61 100%
-    );
+/* Hamburger menu */
+#burger-check {
+    width: 30px;
+    transition: all .2s ease-in-out;
 }
 
-#hamburger-menu #sidebar-menu {
-    visibility: hidden;
-    position: fixed;
+#burger-check:checked {
+    width: 4px;
+}
+
+#burger-label {
+    order: -1;
+    top: 0%;
+    left: 0%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    padding: 2.5rem;
+}
+
+#burger-line,
+#burger-line::before,
+#burger-line::after {
+    position: relative;
+    display: block;
+    background: var(--color-white);
+    height: .15rem;
+    width: 1.2rem;
+    transition: all .2s ease-in-out;
+}
+
+#burger-line::before {
+    position: absolute;
+    content: "";
+    width: 1.7rem;
+    top: -0.5rem;
+}
+
+#burger-line::after {
+    position: absolute;
+    content: "";
+    width: 1.7rem;
+    top: 0.5rem;
+}
+
+
+#burger-check:checked~* #burger-line::before {
     top: 0;
-    left: -250px;
-    width: 200px;
-    height: 100%;
-    background-color: #3D0E61;
-    transition: 0.3s;
-    padding: 0px 10px;
-    box-sizing: border-box;
-}
-
-#hamburger-input:checked + #hamburger-menu #sidebar-menu {
-    visibility: visible;
     left: 0;
+    transform: rotate(45deg);
 }
 
+#burger-check:checked~* #burger-line {
+    background-color: transparent;
+    width: 0rem;
+}
 
+#burger-check:checked~* #burger-line::after {
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+}
 
-
-/* media queries */
-@media screen and (max-width: 480px) {
-    #widenav {
-      display: none;
+@media only screen and (min-width: 481px) {
+    #burger-label {
+        display: none;
     }
-    #hamburger-menu {
-      display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    .header-nav {
+        display: none;
     }
-  }
+}

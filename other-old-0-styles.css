@@ -1,0 +1,186 @@
+@import url("./holberton_school-icon/style.css");
+/* that should get us some icons */
+
+/* now let's get some fonts */
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("./fonts/SourceSansPro-Regular.otf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("./fonts/SourceSansPro-It.otf");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("./fonts/SourceSansPro-Black.otf");
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("./fonts/SourceSansPro-Bold.otf");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("./fonts/SourceSansPro-Semibold.otf");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("./fonts/SourceSansPro-Light.otf");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+/* it's a good day to declare some variables */
+:root {
+    --font-family: 'Source Sans Pro', sans-serif;
+    --link-hoveractive: #FF6565;
+    --text-white: #ffffff;
+    --text-dark: #071629;
+
+
+}
+
+
+html {
+    font-family: var(--font-family);
+}
+
+/* max width of content must be 1000px, also some other defaults */
+/*
+body {
+    max-width: 1000px;
+    margin: auto;
+    font-family: var(--default-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+*/
+
+a {
+    color: var(--text-white);
+    text-decoration: none;
+}
+/* color for hover or active links */
+a:hover,
+a:active {
+    color: var(--link-hoveractive);
+}
+
+/* color for hover or active buttons */
+.button:hover,
+.button:active {
+    opacity: 0.9;
+}
+
+
+/* 
+/* HEADER TIME */
+
+/* class for div that holds the header + hero image sections */
+.heady {
+    background-image: url("./images/headphones_hero_1.jpg");
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    color: var(--text-white);
+}
+
+/* class for just the top header */
+.header {
+    display: flex;
+}
+
+
+/* class for the LOGO */
+.logo {
+}
+
+/* horizontal navigation */
+#widenav {
+    display: block;
+}
+
+#widenav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#widenav li {
+    list-style-type: none;
+    padding-inline: 2rem;
+}
+
+
+
+/* hamburger navigation */
+
+#hamburger-input{
+    display: none;
+  }
+  
+#hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(
+    to bottom, 
+    #3D0E61, #3D0E61 20%, 
+    white 20%, white 40%, 
+    #3D0E61 40%, #3D0E61 60%, 
+    white 60%, white 80%, 
+    #3D0E61 80%, #3D0E61 100%
+    );
+}
+
+#hamburger-menu #sidebar-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #3D0E61;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+
+
+
+
+/* media queries */
+@media screen and (max-width: 480px) {
+    #widenav {
+      display: none;
+    }
+    #hamburger-menu {
+      display: block;
+    }
+  } */
